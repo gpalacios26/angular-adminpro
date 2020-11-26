@@ -48,12 +48,10 @@ const customInitFunctions = () => {
                 $("body").trigger("resize");
                 $("body").removeClass("mini-sidebar");
                 $('.navbar-brand span').show();
-
             } else {
                 $("body").trigger("resize");
                 $("body").addClass("mini-sidebar");
                 $('.navbar-brand span').hide();
-
             }
         });
 
@@ -84,6 +82,7 @@ const customInitFunctions = () => {
         // ============================================================== 
         // Auto select left navbar
         // ============================================================== 
+        /*
         $(function () {
             var url = window.location;
             var element = $('ul#sidebarnav a').filter(function () {
@@ -96,8 +95,8 @@ const customInitFunctions = () => {
                     break;
                 }
             }
-
         });
+        */
         // ============================================================== 
         //tooltip
         // ============================================================== 
@@ -140,7 +139,6 @@ const customInitFunctions = () => {
             e.preventDefault();
             $(this).closest('.card').find('[data-action="collapse"] i').toggleClass('ti-minus ti-plus');
             $(this).closest('.card').children('.card-body').collapse('toggle');
-
         });
         // Toggle fullscreen
         $('a[data-action="expand"]').on('click', function (e) {
@@ -148,7 +146,6 @@ const customInitFunctions = () => {
             $(this).closest('.card').find('[data-action="expand"] i').toggleClass('mdi-arrow-expand mdi-arrow-compress');
             $(this).closest('.card').toggleClass('card-fullscreen');
         });
-
         // Close Card
         $('a[data-action="close"]').on('click', function () {
             $(this).closest('.card').removeClass().slideUp('fast');
