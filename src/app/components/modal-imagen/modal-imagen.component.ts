@@ -51,13 +51,13 @@ export class ModalImagenComponent implements OnInit {
 
     this.fileUploadService.actualizarFoto(this.imagenSubir, tipo, id)
       .then(img => {
-        Swal.fire('Guardado', 'Avatar guardado correctamente', 'success');
+        Swal.fire('Guardado', 'Imagen guardada correctamente', 'success');
 
         this.modalImagenService.nuevaImagen.emit(img);
 
         this.cerrarModal();
       }).catch(err => {
-        Swal.fire('Error', 'No se pudo subir la imagen', 'error');
+        Swal.fire('Error', 'No se pudo guardar la imagen', 'error');
       });
   }
 
